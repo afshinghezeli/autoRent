@@ -26,4 +26,5 @@ export {default as IconService} from './src/service';
 export {default as IconSms} from './src/sms';
 export {default as IconStar} from './src/star';
 export {default as IconSupport24} from './src/support24';
+export {default as IconTickCircle} from './src/tickCircle';
 export {default as IconWalletMinus} from './src/walletMinus';

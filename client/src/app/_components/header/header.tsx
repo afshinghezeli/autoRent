@@ -1,16 +1,16 @@
 "use client";
-import Link from "next/link";
+import Image from "next/image";
+import { Button } from "../button";
 import { IconProfileCircle } from "../icons";
 import { MobileMenu } from "./mobileMenu";
 import { TopNavigation } from "./topNavigation";
-import Image from "next/image";
 
 export const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-center">
+    <header className="flex items-center justify-center lg:absolute lg:right-0 lg:left-0">
       {/* Menu */}
-      <div className="w-full lg:w-[90%] xl:w-[85%] 2xl:container">
-        <div className="flex items-center justify-between py-3 md:py-[18.5px] px-5 lg:px-8 bg-white lg:rounded-b-2xl">
+      <div className="w-full header">
+        <div className="flex items-center justify-between py-2 md:py-[18.5px] px-5 lg:px-8 bg-white lg:rounded-b-2xl">
           {/* mobile menu */}
           <MobileMenu />
 
@@ -31,12 +31,9 @@ export const Header: React.FC = () => {
           {/* menu & searchBar */}
           <TopNavigation />
           {/* login/register & userPanel */}
-          <Link
-            href="#"
-            className="hidden md:block py-1.5 px-4 bg-primary font-[500] text-white text-base rounded-lg leading-180"
-          >
+          <Button variant="primary" className="hidden md:block">
             ورود / ثبت‌نام
-          </Link>
+          </Button>
           <IconProfileCircle className="md:hidden" />
         </div>
       </div>
