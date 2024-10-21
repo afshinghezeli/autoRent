@@ -1,0 +1,65 @@
+.btn {
+  @apply no-underline border-transparent px-4 py-1.5 cursor-pointer select-none;
+  @apply transition-all duration-100;
+  @apply rounded-lg;
+  @apply text-base font-[500];
+  @apply flex items-center justify-center;
+
+  &-primary {
+    @apply bg-primary text-white;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-primary-shade-3;
+      }
+    }
+  }
+  &-secondary {
+    @apply bg-secondary text-black;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-secondary-shade-1;
+      }
+    }
+  }
+  &-ghost {
+    @apply bg-neutral-1 text-neutral-1;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-neutral-2;
+      }
+    }
+  }
+  &-outline {
+    &.btn-primary {
+      @apply bg-transparent border border-primary text-primary;
+      @media (hover: hover) {
+        &:hover {
+          @apply border-primary-shade-3 text-primary-shade-3;
+        }
+      }
+    }
+    &.btn-secondary {
+      @apply bg-transparent border border-secondary text-secondary;
+      @media (hover: hover) {
+        &:hover {
+          @apply border-secondary-shade-1 text-secondary-shade-1;
+        }
+      }
+    }
+    &.btn-ghost {
+      @apply bg-transparent border border-neutral-1 text-neutral-1;
+      @media (hover: hover) {
+        &:hover {
+          @apply border-neutral-2 text-neutral-2;
+        }
+      }
+    }
+  }
+
+  &[disabled],
+  &:disabled {
+    @apply cursor-not-allowed border-none text-neutral-3 bg-neutral-1;
+  }
+
+  //TODO: add size and link style and shape
+}
