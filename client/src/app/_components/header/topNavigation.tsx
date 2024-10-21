@@ -2,9 +2,7 @@ import Link from "next/link";
 import { IconSearchNormal } from "../icons";
 import { menuItems } from "./menuItems";
 
-export const TopNavigation: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = ({
-  className,
-}) => {
+export const TopNavigation: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = () => {
   return (
     <nav className="hidden md:flex items-center font-[500] text-base text-neutral-g10 ">
       <ul className="flex gap-10 items-start ">

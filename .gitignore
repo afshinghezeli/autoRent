@@ -33,4 +33,4 @@ client/.vercel
 # typescript
 client/*.tsbuildinfo
 client/next-env.d.ts
-*storybook.log
+client/*storybook.log

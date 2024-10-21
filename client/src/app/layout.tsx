@@ -34,11 +34,11 @@ export default async function RootLayout({
       lang="fa"
       className={`${estedad.variable} ${figtree.variable}`}
     >
-      <body className="min-h-screen grid grid-rows-[auto_1fr_auto] bg-gray-300">
+      <body className="relative bg-neutral-1">
         <Header />
-        <div className="flex flex-1 justify-center items-center">
+        <main>
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>

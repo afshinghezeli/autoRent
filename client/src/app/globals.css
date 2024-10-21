@@ -1,10 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "../tailwind/components/components.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   font-family: var(--font-estedad);
 }
 :lang(en) {
   font-family: var(--font-figtree);
+}
+.container {
+  @apply w-[94%] xl:w-[85%] 2xl:max-w-[1280px];
+}
+.header {
+  @apply lg:w-[90%] xl:w-[85%] 2xl:w-[1280px];
+}
+.main-container {
+  @apply w-[90%] xl:w-[85%] 2xl:w-[1280px];
 }

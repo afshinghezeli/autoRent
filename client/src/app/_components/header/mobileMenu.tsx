@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { IconCar, IconCloseCircle, IconMenu } from "../icons";
+import Link from "next/link";
 import { useState } from "react";
+import { IconCloseCircle, IconMenu } from "../icons";
 import { Overlay } from "../overlay/overlay";
 import { menuItems } from "./menuItems";
-import Link from "next/link";
 
 export const MobileMenu: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,6 +17,7 @@ export const MobileMenu: React.FC = () => {
         {/* Menu Icon */}
         <IconMenu onClick={() => setMenuOpen((prev) => !prev)} />
         {menuOpen && <Overlay isOpen={menuOpen} setIsOpen={setIsOpen} />}
+        {/* TODO: add overflow: auto */}
         <div
           className={`fixed ${
             menuOpen ? `right-0` : `-right-64`
@@ -47,13 +48,14 @@ export const MobileMenu: React.FC = () => {
             />
           </div>
           {/* Menu Body */}
+          {/* TODO: set pathname to highlight active route */}
           <ul className="flex flex-col space-y-6 items-start pr-2.5">
             {menuItems.map((item) => (
               <li key={`navigation-${item.href}`}>
-                    <Link href={item.href} className="flex items-center gap-x-2">
-                        {item.icon}
-                        {item.title}
-                    </Link>
+                <Link href={item.href} className="flex items-center gap-x-2">
+                  {item.icon}
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>
