@@ -1,0 +1,42 @@
+.dropdown {
+  @apply relative text-sm text-neutral-9 w-full;
+
+  /* button */
+  &-btn {
+    @apply flex items-center justify-between;
+    @apply w-full font-[500] text-base;
+    @apply focus:ring-blue-100 focus:border-blue-300;
+    &-style {
+      @apply bg-white shadow-sm border border-gray-200 py-2 px-3;
+    }
+    &-noStyle {
+      @apply p-0;
+    }
+  }
+  /* list */
+  &-list {
+    @apply absolute top-full mt-2 inset-x-0 rounded shadow-md bg-white divide-y divide-gray-100 overflow-auto;
+    @apply transition-all duration-150 ease-in-out z-10;
+    @apply border border-neutral-1;
+    @supports (-webkit-appearance: none) {
+      &::-webkit-scrollbar {
+        @apply w-2
+      }
+      &::-webkit-scrollbar-track {
+        @apply bg-neutral-1
+      }
+      &::-webkit-scrollbar-thumb {
+        
+        @apply bg-neutral-3 rounded-[50px]
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        @apply bg-neutral-5
+      }
+    }
+  }
+  /* item */
+  &-item {
+    @apply py-2.5 px-4 flex items-center gap-x-3 hover:bg-neutral-1 cursor-pointer;
+    @apply text-neutral-8 font-[500] text-sm;
+  }
+}
