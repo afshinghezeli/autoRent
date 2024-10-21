@@ -28,17 +28,17 @@ export const autoRentColors: { [key: string]: { [key: string]: string } } = {
     "shade-5": "#261B03",
   },
   neutral: {
-    "gray-1": "#F3F3F3",
-    "gray-2": "#D7D7D7",
-    "gray-3": "#C2C2C2",
-    "gray-4": "#AEAEAE",
-    "gray-5": "#9A9A9A",
-    "gray-6": "#868686",
-    "gray-7": "#727272",
-    "gray-8": "#5E5E5E",
-    "gray-9": "#494949",
-    "gray-10": "#353535",
-    "gray-11": "#212121",
+    "1": "#F3F3F3",
+    "2": "#D7D7D7",
+    "3": "#C2C2C2",
+    "4": "#AEAEAE",
+    "5": "#9A9A9A",
+    "6": "#868686",
+    "7": "#727272",
+    "8": "#5E5E5E",
+    "9": "#494949",
+    "10": "#353535",
+    "11": "#212121",
   },
 };
 
@@ -48,10 +48,6 @@ export default {
     extend: {
       container: {
         center: true,
-        padding: {
-          DEFAULT: "1rem",
-          lg: "1.75rem",
-        },
       },
       lineHeight: {
         "80": "0.8",
@@ -63,10 +59,24 @@ export default {
         Estedad: ["var(--font-estedad)"],
       },
       screens: {
+        xs: "480px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
         xl: "1280px",
+      },
+      backgroundImage: {
+        "hero-desktop": 'url("../../public/images/heroSection.webp")',
+        "mobile-hero-desktop":
+          'url("../../public/images/mobileHeroSection.webp")',
+      },
+      fontSize: {
+        base: ["1rem", { lineHeight: "1.8" }],
+        sm: ["0.875rem", { lineHeight: "1.8" }],
+        lg: ["1.125rem", { lineHeight: "1.8" }],
+        xl: ["1.25rem", { lineHeight: "1.8" }],
+        "3.5xl": ["2rem", { lineHeight: "1.4" }],
+        "4xl": ["2.25rem", { lineHeight: "1.4" }],
       },
     },
   },
