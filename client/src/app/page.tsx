@@ -18,18 +18,25 @@ export default function Home() {
               سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
             </p>
             <div className="hidden lg:flex gap-3">
-            <Button variant="secondary" className="items-center text-black mt-6">
-              <IconCar className="text-neutral-9"/>
-              رزرو آسان خودرو
-            </Button>
-            <Button variant="ghost" isOutline={true} className="items-center text-black mt-6">
-              تماس با ما
-            </Button>
+              <Button
+                variant="secondary"
+                className="items-center text-black mt-6"
+              >
+                <IconCar className="text-neutral-9" />
+                رزرو آسان خودرو
+              </Button>
+              <Button
+                variant="ghost"
+                isOutline={true}
+                className="items-center text-black mt-6"
+              >
+                تماس با ما
+              </Button>
             </div>
           </div>
         </div>
       </section>
-      <AdvancedSearch/>
+      <AdvancedSearch />
     </>
   );
 }
