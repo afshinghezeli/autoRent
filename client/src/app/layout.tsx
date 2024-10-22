@@ -4,6 +4,11 @@ import localFont from "next/font/local";
 import { Footer } from "./_components/footer";
 import { Header } from "./_components/header";
 import "./globals.css";
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  'themeColor':'#194BF0'
+}
 
 const figtree = Figtree({
   subsets: ["latin"],
