@@ -156,10 +156,9 @@ export const AdvancedSearch: React.FC = () => {
                 />
               </div>
             </div>
-
-            <Link href="#" className="p-4 bg-secondary rounded-2xl mr-12">
+            <Button className="p-4 bg-secondary rounded-2xl mr-12">
               <IconSearchNormal width={24} color="#212121" />
-            </Link>
+            </Button>
           </div>
         </div>
         <div className="lg:hidden">
