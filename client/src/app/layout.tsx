@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   robots: "NOINDEX, NOFOLLOW",
 };
 export const viewport: Viewport = {
-  themeColor: "#194BF0",
+  themeColor: "#3F69F3",
 };
 
 const figtree = Figtree({
