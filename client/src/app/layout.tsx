@@ -1,14 +1,19 @@
 import { Figtree } from "next/font/google";
 import localFont from "next/font/local";
 
+import { Metadata, Viewport } from "next";
 import { Footer } from "./_components/footer";
 import { Header } from "./_components/header";
 import "./globals.css";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  themeColor: '#194BF0'
-}
+  title: "اتورنت",
+  description: "سرویس دهنده رزرو خودرو در ایران",
+  robots: "NOINDEX, NOFOLLOW",
+};
+export const viewport: Viewport = {
+  themeColor: "#194BF0",
+};
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -41,9 +46,7 @@ export default async function RootLayout({
     >
       <body className="relative bg-neutral-1">
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
