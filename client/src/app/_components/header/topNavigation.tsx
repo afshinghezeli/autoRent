@@ -8,7 +8,7 @@ export const TopNavigation: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = ()
       <ul className="flex gap-10 items-start ">
         {menuItems.map((item) => (
           <li key={`navigation-${item.href}`}>
-            <Link href={item.href}>{item.title}</Link>
+            <Link prefetch={false} href={item.href}>{item.title}</Link>
           </li>
         ))}
       </ul>
