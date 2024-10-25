@@ -1,0 +1,14 @@
+.infinite-Scroll {
+  @apply flex gap-2 2xl:container overflow-hidden;
+  @apply [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)];
+}
+.infinite-Scroll__list {
+  @apply flex flex-nowrap gap-2 items-center justify-between shrink-0 h-full;
+  @apply overflow-hidden;
+}
+.infinite-Scroll__item {
+  @apply flex items-center;
+}
+.infinite-Scroll__item--divider {
+  @apply after:content-['●'] after:mr-2;
+}
