@@ -2,7 +2,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
+:root {
+  --brand__item: 100px;
+}
 html {
   font-family: var(--font-estedad);
 }
@@ -17,4 +19,15 @@ html {
 }
 .main-container {
   @apply w-[90%] xl:w-[85%] 2xl:w-[1280px];
+}
+.direction-rtl {
+  direction: rtl;
+}
+.direction-ltr {
+  direction: ltr;
+}
+
+/* Brand Section */
+.brand {
+  @apply flex flex-col gap-7 px-[22px] opacity-50 mt-[49px] mb-[47px];
 }
