@@ -49,6 +49,20 @@ export default {
       container: {
         center: true,
       },
+      keyframes: {
+        "infinite-scroll": {
+          "from": { transform: "translateX(calc(0))" },
+          "to": { transform: "translateX(calc(-100%))" },
+        },
+        "infinite-scroll-reverse": {
+          "from": { transform: "translateX(calc(0))" },
+          "to": { transform: "translateX(calc(100%))" },
+        },
+      },  
+      animation: {
+        "infinite-scroll": "infinite-scroll 50s linear infinite",
+        "infinite-scroll-reverse": "infinite-scroll-reverse 50s linear infinite",
+      },
       lineHeight: {
         "80": "0.8",
         "140": "1.4",
