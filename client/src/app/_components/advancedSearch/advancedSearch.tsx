@@ -63,7 +63,7 @@ export const AdvancedSearch: React.FC = () => {
                   placeholder={locations[0]}
                   listItems={locations}
                   onItemSelected={handleItemSelected}
-                  btnStyle={true}
+                  btnStyle={false}
                 />
               </div>
             </div>
