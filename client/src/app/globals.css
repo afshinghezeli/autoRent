@@ -31,3 +31,10 @@ html {
 .brand {
   @apply flex flex-col gap-7 px-[22px] opacity-50 mt-[49px] mb-[47px];
 }
+
+.why-us-bg {
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../../public/images/whyUs.webp');
+}
+.text-align-end {
+  text-align-last: center;
+}

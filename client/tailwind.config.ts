@@ -81,8 +81,7 @@ export default {
       },
       backgroundImage: {
         "hero-desktop": 'url("../../public/images/heroSection.webp")',
-        "mobile-hero-desktop":
-          'url("../../public/images/mobileHeroSection.webp")',
+        "why-us": 'url("../../public/images/whyUs.webp")',
       },
       fontSize: {
         base: ["1rem", { lineHeight: "1.8" }],

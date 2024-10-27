@@ -3,6 +3,7 @@ import { AdvancedSearch } from "./_components/advancedSearch/advancedSearch";
 import { Button } from "./_components/button";
 import { IconCar } from "./_components/icons";
 import { InfiniteScroll } from "./_components/InfiniteScroll";
+import WhyUs from "./_components/whyUs/whyUs";
 
 const brandsLogo = [
   { src: "/images/brands/landrover.png", alt: "Land Rover", height: 50 },
@@ -72,6 +73,9 @@ export default function Home() {
             </div>
           ))}
         />
+      </section>
+      <section className="why-us">
+        <WhyUs/>
       </section>
     </>
   );
