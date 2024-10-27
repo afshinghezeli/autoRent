@@ -1,10 +1,10 @@
 import { JSX } from "react";
-import { componentBase } from "../types/component-base.type";
+import { ComponentBase } from "../types/component-base.type";
 
-export type DropdownProps = componentBase & {
+export type DropdownProps = ComponentBase & {
   btnIcon?: JSX.Element;
   placeholder?: string;
   listItems: string[];
   btnStyle?: boolean;
   onItemSelected: (selectedItem: string) => void;
-}
+};

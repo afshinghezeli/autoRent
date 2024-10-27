@@ -7,10 +7,10 @@ import { TopNavigation } from "./topNavigation";
 
 export const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-center lg:absolute lg:right-0 lg:left-0">
+    <header className="header">
       {/* Menu */}
-      <div className="w-full header">
-        <div className="flex items-center justify-between py-2 md:py-[18.5px] px-5 lg:px-8 bg-white lg:rounded-b-2xl">
+      <div className="header__wrapper">
+        <div className="header__content">
           {/* mobile menu */}
           <MobileMenu />
 

@@ -15,7 +15,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [itemSelected, setItemSelected] = useState<null | string>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const itemClasses = classNames("dropdown-item");
   const dropdownClasses = classNames(className, "dropdown");
   const buttonClasses = classNames(
@@ -29,27 +29,32 @@ export const Dropdown: React.FC<DropdownProps> = ({
     { "max-h-44 opacity-100": isOpen }
   );
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target as Node)
-    ) {
-      setIsOpen(false);
-    }
-  };
-
   useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        ref.current &&
+        !ref.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [isOpen]);
 
   return (
-    <div className={dropdownClasses} ref={dropdownRef}>
-      <Button onClick={ () =>  setIsOpen((prev)=>!prev) } className={buttonClasses}>
+    <div className={dropdownClasses} ref={ref}>
+      <Button
+        onClick={() => setIsOpen((prev) => !prev)}
+        className={buttonClasses}
+      >
         <span>{itemSelected ? itemSelected : placeholder}</span>
-        <span>{btnIcon ? btnIcon : <IconArrowDown width={14} height={14} />}</span>
+        <span>
+          {btnIcon ? btnIcon : <IconArrowDown width={14} height={14} />}
+        </span>
       </Button>
       <ul className={listClasses} role="listbox">
         {listItems.map((item, index) => (
