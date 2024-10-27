@@ -2,7 +2,7 @@
 export const Footer: React.FC = () => {
   return (
     <footer>
-      Footer
+      درحال توسعه . . . 
       <br />
       <br />
       <br />
