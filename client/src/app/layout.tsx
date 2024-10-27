@@ -44,7 +44,7 @@ export default async function RootLayout({
       lang="fa"
       className={`${estedad.variable} ${figtree.variable}`}
     >
-      <body className="relative bg-neutral-1">
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />

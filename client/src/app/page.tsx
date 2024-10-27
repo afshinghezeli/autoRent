@@ -4,6 +4,7 @@ import { Button } from "./_components/button";
 import { IconCar } from "./_components/icons";
 import { InfiniteScroll } from "./_components/InfiniteScroll";
 import WhyUs from "./_components/whyUs/whyUs";
+import { CarCategory } from "./_components/CarCategory";
 
 const brandsLogo = [
   { src: "/images/brands/landrover.png", alt: "Land Rover", height: 50 },
@@ -21,30 +22,23 @@ const brandsLogo = [
 export default function Home() {
   return (
     <>
-      <section className="bg-primary-Tint-1 xs:bg-transparent xs:bg-hero-desktop h-[236px] bg-no-repeat bg-cover bg-[center_top] xs:aspect-[2/1] xs:h-auto flex justify-center 2xl:container 2xl:rounded-b-2xl lg:pt-24 xl:pt-0">
-        <div className="container h-full flex mt-8 xs:mt-0 xs:items-center justify-center">
-          <div className="w-full">
-            <p className="font-[700] text-3.5xl  xs:text-4xl lg:text-[44px] text-white xs:text-secondary">
+      <section className="hero">
+        <div className="hero__wrapper">
+          <div className="hero__content">
+            <p className="hero__title">
               اُتـــو رِنت؛ سریع،
               <br />
               آسان و به صرفه
             </p>
-            <p className="font-[400] text-sm xs:text-base md:text-base lg:text-xl text-[#F9F9F9] xs:max-w-[250px] md:max-w-full mt-[7px]">
+            <p className="hero__text">
               سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
             </p>
-            <div className="hidden lg:flex gap-3">
-              <Button
-                variant="secondary"
-                className="items-center text-black mt-6"
-              >
+            <div className="hero__buttons">
+              <Button variant="secondary">
                 <IconCar className="text-neutral-9" />
                 رزرو آسان خودرو
               </Button>
-              <Button
-                variant="ghost"
-                isOutline={true}
-                className="items-center text-black mt-6"
-              >
+              <Button variant="ghost" isOutline={true}>
                 تماس با ما
               </Button>
             </div>
@@ -75,7 +69,10 @@ export default function Home() {
         />
       </section>
       <section className="why-us">
-        <WhyUs/>
+        <WhyUs />
+      </section>
+      <section className="car-category">
+        <CarCategory/>
       </section>
     </>
   );

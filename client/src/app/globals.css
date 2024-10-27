@@ -2,9 +2,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-:root {
-  --brand__item: 100px;
-}
+
 html {
   font-family: var(--font-estedad);
 }
@@ -14,9 +12,7 @@ html {
 .container {
   @apply w-[94%] xl:w-[85%] 2xl:max-w-[1280px];
 }
-.header {
-  @apply lg:w-[90%] xl:w-[85%] 2xl:w-[1280px];
-}
+
 .main-container {
   @apply w-[90%] xl:w-[85%] 2xl:w-[1280px];
 }
@@ -26,15 +22,59 @@ html {
 .direction-ltr {
   direction: ltr;
 }
+.text-align-end {
+  text-align-last: center;
+}
+
+/* Body */
+body {
+  @apply relative bg-neutral-1;
+}
+
+/* Header */
+.header {
+  @apply flex items-center justify-center lg:absolute lg:right-0 lg:left-0;
+}
+.header__wrapper {
+  @apply lg:w-[90%] xl:w-[85%] 2xl:w-[1280px] w-full;
+}
+.header__content {
+  @apply flex items-center justify-between;
+  @apply py-2 md:py-[18.5px] px-5 lg:px-8 bg-white lg:rounded-b-2xl;
+}
+
+/* Hero Section */
+.hero {
+  @apply h-[236px] xs:h-auto;
+  @apply flex justify-center 2xl:container;
+  @apply lg:pt-24 xl:pt-0;
+  @apply bg-primary-Tint-1 xs:bg-transparent xs:bg-hero-desktop;
+  @apply bg-no-repeat bg-cover bg-[center_top] xs:aspect-[2/1];
+  @apply 2xl:rounded-b-2xl;
+}
+.hero__wrapper {
+  @apply container h-full flex mt-8 xs:mt-0 xs:items-center justify-center;
+}
+.hero__content {
+  @apply w-full;
+}
+.hero__title {
+  @apply font-[700] text-3.5xl  xs:text-4xl lg:text-[44px] text-white xs:text-secondary;
+}
+.hero__text {
+  @apply font-[400] text-sm xs:text-base md:text-base lg:text-xl text-[#F9F9F9] xs:max-w-[250px] md:max-w-full mt-[7px];
+}
+.hero__buttons {
+  @apply hidden lg:flex gap-3 mt-6;
+}
 
 /* Brand Section */
 .brand {
   @apply flex flex-col gap-7 px-[22px] opacity-50 mt-[49px] mb-[47px];
 }
 
+/* WhyUs Section */
 .why-us-bg {
-  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../../public/images/whyUs.webp');
-}
-.text-align-end {
-  text-align-last: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../public/images/whyUs.webp");
 }
