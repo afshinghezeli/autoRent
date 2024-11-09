@@ -4,7 +4,7 @@ const carCategories = [
   { name: "کوپه", img: "/images/carCategory/kope.webp" },
   { name: "سدان", img: "/images/carCategory/sedan.webp" },
   { name: "کروک", img: "/images/carCategory/krock.webp" },
-  { name: "شاسی بلند", img: "/images/carCategory/highshasi.webp" },
+  { name: "شاسی بلند", img: "/images/carCategory/highShasi.webp" },
   { name: "اسپرت", img: "/images/carCategory/sport.webp" },
 ];
 
