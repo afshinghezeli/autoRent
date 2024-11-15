@@ -5,6 +5,8 @@ import { IconCar } from "./_components/icons";
 import { InfiniteScroll } from "./_components/InfiniteScroll";
 import WhyUs from "./_components/whyUs/whyUs";
 import { CarCategory } from "./_components/CarCategory";
+import { CarsPreview } from "./_components/CarPreview";
+import { HowReservation } from "./_components/HowReservation";
 
 const brandsLogo = [
   { src: "/images/brands/landrover.png", alt: "Land Rover", height: 50 },
@@ -73,6 +75,12 @@ export default function Home() {
       </section>
       <section className="car-category">
         <CarCategory/>
+      </section>
+      <section className="car-preview">
+        <CarsPreview/>
+      </section>
+      <section className="how-reservation">
+        <HowReservation/>
       </section>
     </>
   );
