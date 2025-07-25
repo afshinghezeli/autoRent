@@ -170,7 +170,7 @@ export default {
         "why-us": 'url("../../public/images/whyUs.webp")',
       },
       fontSize: {
-        'xs': ['13px', { lineHeight: '140%' }], // Caption-S
+        'xs': ['0.75rem', { lineHeight: '140%' }], // Caption-S
         base: ["1rem", { lineHeight: "1.8" }],   // Body-M (16px)
         sm: ["0.875rem", { lineHeight: "1.8" }], // Body-S (14px), Button-M
         lg: ["1.125rem", { lineHeight: "1.8" }], // Body-L (18px), H3

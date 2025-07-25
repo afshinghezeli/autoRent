@@ -86,7 +86,7 @@ export default {
       },
       fontSize: {
         // Define custom sizes. Avoid redefining Tailwind's default values (e.g., 'sm', 'base', 'lg').
-        'xs': ['13px', { lineHeight: '140%' }], // Custom size
+        'xs': ['0.75rem', { lineHeight: '140%' }], // Custom size
         '5xl': ['54px', { lineHeight: '1.2' }], // Custom size
       },
       lineHeight: {
