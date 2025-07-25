@@ -1,3 +1,130 @@
 .faq {
-  @apply py-16;
+  @apply py-8 sm:py-12 lg:py-16; /* Using existing Tailwind spacing which aligns with base-8 */
+  
+  /* Container */
+  &__container {
+    @apply container mb-12;
+  }
+  
+  /* Header section */
+  &__header {
+    @apply text-center mb-6 sm:mb-8 lg:mb-6; /* 24px spacing-lg */
+  }
+  
+  &__subtitle {
+    @apply font-medium text-neutral-8 text-lg sm:text-xl lg:text-2xl leading-180 mb-2 block; /* 8px spacing-xs */
+  }
+  
+  &__title {
+    @apply font-bold text-xl sm:text-2xl lg:text-[2rem] leading-180 text-neutral-10 mb-4;
+    
+    &-highlight {
+      @apply text-secondary-shade-1;
+    }
+  }
+  
+  /* Accordion items */
+  &__item {
+    @apply transition-all duration-[400ms] ease-out;
+    
+    &--active {
+      @apply flex-grow;
+    }
+    
+    &:not(&--active) {
+      @apply flex-grow-0;
+    }
+  }
+  
+  /* Question header/button */
+  &__question {
+    @apply w-full flex items-center gap-2 sm:gap-3 cursor-pointer select-none rounded-lg text-right focus:outline-none; /* 8px/12px spacing */
+  }
+  
+  /* Icon */
+  &__icon {
+    @apply transition-transform duration-300 ease-out;
+    
+    &--rotated {
+      @apply rotate-180;
+    }
+  }
+  
+  /* Content container */
+  &__content {
+    @apply overflow-hidden border-t border-neutral-1;
+    @apply transition-all duration-[400ms];
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    opacity: 0;
+    
+    &--expanded {
+      max-height: 300px;
+      opacity: 1;
+      @apply pt-2;
+    }
+  }
+  
+  /* Layout sections */
+  &__layout {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-x-6; /* 24px spacing-lg */
+  }
+  
+  &__image-section {
+    @apply lg:col-span-4 lg:order-2 order-1;
+  }
+  
+  &__image-container {
+    @apply h-64 sm:h-80 lg:h-[459px] w-full lg:w-[392px] overflow-hidden rounded-2xl mx-auto;
+  }
+  
+  &__accordion-section {
+    @apply lg:col-span-8 lg:order-1 order-2;
+  }
+  
+  &__accordion-list {
+    @apply flex flex-col gap-3 sm:gap-4 h-full; /* 12px/16px spacing-sm/md */
+  }
+  
+  /* Item container */
+  &__item-container {
+    @apply px-3 sm:px-4 rounded-xl bg-white border border-neutral-2 h-full shadow-sm hover:shadow-md transition-all duration-200; /* 12px/16px padding-sm/md */
+  }
+  
+  /* Icon container */
+  &__icon-container {
+    @apply flex-shrink-0;
+  }
+  
+  /* Question title */
+  &__question-title {
+    @apply py-4 font-medium text-sm sm:text-base text-neutral-10 flex-1; /* 16px padding-sm */
+  }
+  
+  /* Answer text area */
+  &__answer {
+    @apply max-h-48 overflow-y-auto pr-2;
+    
+    /* Custom scrollbar */
+    &::-webkit-scrollbar {
+      @apply w-1;
+    }
+    
+    &::-webkit-scrollbar-track {
+      @apply bg-neutral-1 rounded-full;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      @apply bg-neutral-3 rounded-full;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-neutral-5;
+    }
+  }
+  
+  /* Answer text */
+  &__answer-text {
+    @apply font-normal text-xs sm:text-sm leading-180 text-neutral-7 pb-3;
+  }
 }

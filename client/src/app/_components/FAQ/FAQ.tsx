@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useCallback, KeyboardEvent } from "react";
 import { IconAddSquare, IconMinusSquare } from "../icons";
 import { FAQProps, FAQItem } from "./faq.types";
 
@@ -33,91 +33,112 @@ export const FAQ: React.FC<FAQProps> = ({
 }) => {
   const [openItem, setOpenItem] = useState<number>(2); // Default to second item (fuel/washing question)
 
-  const toggleItem = (id: number) => {
+  const toggleItem = useCallback((id: number) => {
     if (openItem === id) {
       // Keep item open - don't allow closing the active accordion
     } else {
       setOpenItem(id); // Open new accordion
     }
-  };
+  }, [openItem]);
+
+  const handleKeyDown = useCallback((event: KeyboardEvent<HTMLButtonElement>, id: number) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleItem(id);
+    }
+  }, [toggleItem]);
 
   const faqClasses = className ? `faq ${className}` : "faq";
 
   return (
     <div className={faqClasses}>
       {/* Container */}
-      <div className="container mb-12">
+      <div className="faq__container">
         {/* Title & Subtitle */}
-        <div className="text-center mb-6">
+        <div className="faq__header">
           {/* Subtitle */}
-          <span className="font-medium text-neutral-8 text-2xl leading-180 mb-2 block">
+          <span className="faq__subtitle">
             پر تکرارترین سؤالاتی که پرسیدید
           </span>
           {/* Title */}
-          <h2 className="font-bold text-[2rem] leading-180 text-neutral-10 mb-4">
+          <h2 className="faq__title">
             سؤالات
-            <span className="text-secondary-shade-1"> متداول </span>
+            <span className="faq__title-highlight"> متداول </span>
           </h2>
         </div>
 
         {/* Accordion & Image */}
-        <div className="grid grid-cols-12 gap-x-6">
+        <div className="faq__layout">
+          {/* Image - Mobile First (Top on mobile/tablet) */}
+          <div className="faq__image-section">
+            <div className="faq__image-container">
+              <Image 
+                src="/images/faqPic.webp" 
+                alt="مرد در حال فکر - بخش سؤالات متداول"
+                width={392}
+                height={459}
+                className="object-cover w-full h-full"
+                priority={true}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 392px"
+              />
+            </div>
+          </div>
           {/* Accordion */}
-          <div className="col-span-8">
-            <div className="flex flex-col gap-4 h-full">
+          <div className="faq__accordion-section">
+            <div className="faq__accordion-list" role="tablist" aria-label="سؤالات متداول">
               {items.map((item) => {
                 const isActive = openItem === item.id;
                 
                 return (
                   <div
                     key={item.id}
-                    className={`transition-all duration-300 ${isActive ? "grow" : "grow-0"}`}
+                    className={`faq__item ${isActive ? "faq__item--active" : ""}`}
                   >
-                    <div className="px-4 rounded-xl bg-white border border-neutral-2 h-full">
+                    <div className="faq__item-container">
                       {/* Header */}
-                      <div
+                      <button
                         onClick={() => toggleItem(item.id)}
-                        className="flex items-center gap-2 cursor-pointer select-none"
+                        onKeyDown={(e) => handleKeyDown(e, item.id)}
+                        className="faq__question"
+                        role="tab"
+                        aria-expanded={isActive}
+                        aria-controls={`faq-panel-${item.id}`}
+                        id={`faq-tab-${item.id}`}
+                        tabIndex={0}
                       >
                         {/* Icon */}
-                        <div>
+                        <div className="faq__icon-container" aria-hidden="true">
                           {isActive ? (
-                            <IconMinusSquare size={24} className="text-primary" />
+                            <IconMinusSquare width={20} height={20} className={`text-primary sm:w-6 sm:h-6 faq__icon faq__icon--rotated`} />
                           ) : (
-                            <IconAddSquare size={24} className="text-primary" />
+                            <IconAddSquare width={20} height={20} className="text-primary sm:w-6 sm:h-6 faq__icon" />
                           )}
                         </div>
                         {/* Title */}
-                        <h6 className="py-6 font-medium text-base text-neutral-10">
+                        <h6 className="faq__question-title">
                           {item.question}
                         </h6>
-                      </div>
+                      </button>
                       {/* Body */}
-                      <div className="transition-all">
+                      <div
+                        className={`faq__content ${isActive ? "faq__content--expanded" : ""}`}
+                        role="tabpanel"
+                        id={`faq-panel-${item.id}`}
+                        aria-labelledby={`faq-tab-${item.id}`}
+                        hidden={!isActive}
+                      >
                         {/* Text */}
-                        <p
-                          className={`font-normal text-sm leading-180 text-neutral-7 ${
-                            isActive ? "block pb-4" : "hidden"
-                          }`}
-                        >
-                          {item.answer}
-                        </p>
+                        <div className="faq__answer">
+                          <p className="faq__answer-text">
+                            {item.answer}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 );
               })}
             </div>
-          </div>
-          {/* Image */}
-          <div className="col-span-4 h-[459px] w-[392px] overflow-hidden rounded-2xl">
-            <Image 
-              src="/images/faqPic.webp" 
-              alt="FAQ"
-              width={392}
-              height={459}
-              className="object-cover w-full h-full"
-            />
           </div>
         </div>
       </div>
