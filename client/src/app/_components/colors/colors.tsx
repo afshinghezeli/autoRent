@@ -1,9 +1,9 @@
 "use client";
-import { autoRentColors } from "../../../../tailwind.config";
+import { flowUIColors } from "../../../../tailwind.config";
 
 export const Colors: React.FC = () => (
   <div className="flex flex-wrap justify-center" dir="ltr" lang="en">
-    {Object.entries(autoRentColors).map(([groupName, colors]) =>
+    {Object.entries(flowUIColors).map(([groupName, colors]) =>
       Object.entries(colors).map(([name, color]) => (
         <ColorBox
           key={`${groupName}-${name}`}
