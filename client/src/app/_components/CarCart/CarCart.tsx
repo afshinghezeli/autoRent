@@ -4,12 +4,12 @@ import { CarCartProps } from "./CarCart.types";
 
 export const CarCart: React.FC<CarCartProps> = ({ image }: CarCartProps) => {
   return (
-    <div className="car-cart bg-white col-span-4 border border-neutral-g2 rounded-2xl p-4">
+    <div className="car-cart bg-white col-span-4 border border-neutral-2 rounded-2xl p-4">
       {/* container */}
       <div>
         {/* Image */}
-        <div className="relative overflow-hidden h-[14.0625rem] border border-neutral-g1 rounded-xl mb-2">
-          <span className="absolute left-2 top-2 z-10 text-white bg-primary-shade-3 py-0.5 px-1.5 inline-block rounded-lg font-[500] text-base">
+        <div className="relative overflow-hidden h-56 border border-neutral-1 rounded-xl mb-2">
+          <span className="absolute left-2 top-2 z-10 text-white bg-primary-shade-3 py-0.5 px-1.5 inline-block rounded-lg font-medium text-base">
             ٪<span>20</span>
           </span>
           <Image
@@ -21,10 +21,10 @@ export const CarCart: React.FC<CarCartProps> = ({ image }: CarCartProps) => {
         </div>
         {/* Name & Model */}
         <div className="mb-2">
-          <h6 className="font-[700] text-base  mb-2">اجاره بنز E350 سدان</h6>
-          <div className="flex items-center gap-[3px] font-[400] text-xs ">
-            <span className=" text-neutral-g6">مدل:</span>
-            <span className="text-neutral-g9">2016</span>
+          <h6 className="font-bold text-base  mb-2">اجاره بنز E350 سدان</h6>
+          <div className="flex items-center gap-1 font-regular text-xs ">
+            <span className=" text-neutral-6">مدل:</span>
+            <span className="text-neutral-9">2016</span>
           </div>
         </div>
         {/* Price Box */}
@@ -32,37 +32,37 @@ export const CarCart: React.FC<CarCartProps> = ({ image }: CarCartProps) => {
           {/* Box 1 */}
           <div className="flex items-center justify-between bg-neutral-1 rounded-lg p-2">
             <div className="flex items-center gap-2">
-              <span className="font-[500] text-xs  text-neutral-11">
+              <span className="font-medium text-xs  text-neutral-11">
                 از ۱ تا 30 روز:
               </span>
-              <span className="font-[700] text-base text-primary">
+              <span className="font-bold text-base text-primary">
                 8,500,000
               </span>
             </div>
-            <span className="font-[500] text-xs  text-neutral-g9">روزانه</span>
+            <span className="font-medium text-xs  text-neutral-9">روزانه</span>
           </div>
           {/* Box 2 */}
           <div className="flex items-center justify-between bg-neutral-1 rounded-lg p-2">
             <div className="flex items-center gap-2">
-              <span className="font-[500] text-xs  text-neutral-11">
+              <span className="font-medium text-xs  text-neutral-11">
                 از ۱ تا 30 روز:
               </span>
-              <span className="font-[700] text-base text-primary">
+              <span className="font-bold text-base text-primary">
                 8,500,000
               </span>
             </div>
-            <span className="font-[500] text-xs  text-neutral-g9">ماهانه</span>
+            <span className="font-medium text-xs  text-neutral-9">ماهانه</span>
           </div>
         </div>
         {/* Guarantee Amount */}
-        <div className="flex items-center justify-between border-t border-neutral-g2 py-2  text-neutral-g11">
-          <span className="font-[500] text-xs">مبلغ ضمانت:</span>
-          <p className="font-[700] text-xs ">
+        <div className="flex items-center justify-between border-t border-neutral-2 py-2  text-neutral-11">
+          <span className="font-medium text-xs">مبلغ ضمانت:</span>
+          <p className="font-bold text-xs ">
             <span>80</span> میلیون تومان
           </p>
         </div>
         {/* Reservation Btn */}
-        <Button variant="primary" className="font-[600] text-sm w-full ">
+        <Button variant="primary" className="font-semibold text-sm w-full ">
           درخواست رزرو
         </Button>
       </div>
