@@ -25,7 +25,7 @@
   
   /* Accordion items */
   &__item {
-    @apply transition-all duration-[400ms] ease-out;
+    @apply transition-all duration-500 ease-out;
     
     &--active {
       @apply flex-grow;
@@ -53,7 +53,7 @@
   /* Content container */
   &__content {
     @apply overflow-hidden border-t border-neutral-1;
-    @apply transition-all duration-[400ms];
+    @apply transition-all duration-500;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     max-height: 0;
     opacity: 0;
