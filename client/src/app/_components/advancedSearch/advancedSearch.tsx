@@ -30,21 +30,21 @@ export const AdvancedSearch: React.FC = () => {
   };
   return (
     <div className="container">
-      <div className="p-2 xs:p-6 -mt-14 md:-mt-24 bg-white border border-neutral-g2 rounded-2xl">
-        <div className="flex items-center justify-between flex-wrap mb-4 md:mb-[57px]">
+      <div className="p-2 xs:p-6 -mt-14 md:-mt-24 bg-white border border-neutral-2 rounded-2xl">
+        <div className="flex items-center justify-between flex-wrap mb-4 md:mb-14">
           <div className="flex gap-2 items-center justify-around xs:justify-normal text-xs xs:text-sm">
-            <button className="font-[600] leading-180 py-[7.5px] px-3 bg-primary rounded-full border border-neutral-g2 text-white">
+            <button className="font-semibold leading-180 py-2 px-3 bg-primary rounded-full border border-neutral-2 text-white">
               خودرو با راننده
             </button>
-            <button className="font-[600] leading-180 py-[7.5px] px-3 rounded-full border border-neutral-g2">
+            <button className="font-semibold leading-180 py-2 px-3 rounded-full border border-neutral-2">
               خودرو بی راننده
             </button>
-            <button className="font-[600] leading-180 py-[7.5px] px-3 rounded-full border border-neutral-g2">
+            <button className="font-semibold leading-180 py-2 px-3 rounded-full border border-neutral-2">
               ماشین عروسی
             </button>
           </div>
-          <div className="mt-2 pr-[7.5px] ">
-            <Link href="#" className="font-[500] text-sm text-primary ">
+          <div className="mt-2 pr-2 ">
+            <Link href="#" className="font-medium text-sm text-primary ">
               اطلاعات بیشتر در مورد رزرو خودرو
             </Link>
           </div>
