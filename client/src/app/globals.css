@@ -36,11 +36,11 @@ body {
   @apply flex items-center justify-center lg:absolute lg:right-0 lg:left-0;
 }
 .header__wrapper {
-  @apply lg:w-[90%] xl:w-[85%] 2xl:w-[1280px] w-full;
+  @apply lg:w-[90%] xl:w-[85%] 2xl:w-[1280px] w-full; 
 }
 .header__content {
   @apply flex items-center justify-between;
-  @apply py-2 md:py-[18.5px] px-5 lg:px-8 bg-white lg:rounded-b-2xl;
+  @apply py-2 md:py-[18.5px] px-5 lg:px-8 bg-white lg:rounded-b-2xl; 
 }
 
 /* Hero Section */
@@ -59,13 +59,13 @@ body {
   @apply w-full;
 }
 .hero__title {
-  @apply font-[700] text-3.5xl  xs:text-4xl lg:text-[44px] text-white xs:text-secondary;
+  @apply font-Inter font-[700] text-3.5xl  xs:text-4xl lg:text-[44px] text-white xs:text-secondary;
 }
 .hero__text {
-  @apply font-[400] text-sm xs:text-base md:text-base lg:text-xl text-[#F9F9F9] xs:max-w-[250px] md:max-w-full mt-[7px];
+  @apply font-Inter font-[400] text-sm xs:text-base md:text-base lg:text-xl text-[#F9F9F9] xs:max-w-[250px] md:max-w-full mt-[7px];
 }
 .hero__buttons {
-  @apply hidden lg:flex gap-3 mt-6;
+  @apply font-Inter hidden lg:flex gap-3 mt-6;
 }
 
 /* Brand Section */
