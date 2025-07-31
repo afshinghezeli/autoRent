@@ -1,6 +1,8 @@
  "use client";
 import { flowUIColors } from "../../../../tailwind.config";
 
+// Component to display FlowUI Design System colors
+
 export const Colors: React.FC = () => (
   <div className="flex flex-wrap justify-center" dir="ltr" lang="en">
     {Object.entries(flowUIColors).map(([groupName, colors]) =>
