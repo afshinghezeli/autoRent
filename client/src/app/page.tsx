@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { AdvancedSearch } from "./_components/advancedSearch/advancedSearch";
+import { Articles } from "./_components/articles";
 import { Button } from "./_components/button";
-import { IconCar } from "./_components/icons";
-import { InfiniteScroll } from "./_components/InfiniteScroll";
-import WhyUs from "./_components/whyUs/whyUs";
 import { CarCategory } from "./_components/CarCategory";
 import { CarsPreview } from "./_components/CarPreview";
+import { FAQ } from "./_components/FAQ";
 import { HowReservation } from "./_components/HowReservation";
+import { InfiniteScroll } from "./_components/InfiniteScroll";
+import { Testimonial } from "./_components/testimonial";
+import WhyUs from "./_components/whyUs/whyUs";
 
 const brandsLogo = [
   { src: "/images/brands/landrover.png", alt: "Land Rover", height: 50 },
@@ -28,20 +30,19 @@ export default function Home() {
         <div className="hero__wrapper">
           <div className="hero__content">
             <p className="hero__title">
-              اُتـــو رِنت؛ سریع،
+              AutoRent, Fast
               <br />
-              آسان و به صرفه
+              Easy and Affordable.
             </p>
             <p className="hero__text">
-              سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
+              Car reservation service, in the shortest possible time!
             </p>
             <div className="hero__buttons">
               <Button variant="secondary">
-                <IconCar className="text-neutral-9" />
-                رزرو آسان خودرو
+                Easy Car Booking
               </Button>
               <Button variant="ghost" isOutline={true}>
-                تماس با ما
+                Contact Us
               </Button>
             </div>
           </div>
@@ -81,6 +82,15 @@ export default function Home() {
       </section>
       <section className="how-reservation">
         <HowReservation/>
+      </section>
+      <section className="faq">
+        <FAQ/>
+      </section>
+      <section className="testimonial">
+        <Testimonial />
+      </section>
+      <section className="articles">
+        <Articles />
       </section>
     </>
   );
