@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 import { flowUIColors } from "../../../../tailwind.config";
 
 export const Colors: React.FC = () => (
