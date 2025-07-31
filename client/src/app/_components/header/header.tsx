@@ -7,7 +7,7 @@ import { TopNavigation } from "./topNavigation";
 
 export const Header: React.FC = () => {
   return (
-    <header className="header">
+    <header className="header font-Inter">
       {/* Menu */}
       <div className="header__wrapper">
         <div className="header__content">
@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
           <MobileMenu />
 
           {/* logo */}
-          <div className="flex gap-[5px] items-center">
+          <div className="flex gap-2 items-center"> {/* Changed from gap-[5px] to gap-1 (4px) - closest to design tokens */}
             <Image
               className="hidden lg:block"
               src="/images/autoRent.webp"
@@ -23,16 +23,16 @@ export const Header: React.FC = () => {
               width={59}
               height={59}
             />
-            <p className="text-2xl font-[900] leading-180">
-              <span className="text-primary">اُتــو</span>
-              <span className="text-secondary">رِنت</span>
+            <p className="text-3xl font-[900] leading-180"> {/* Changed font-[900] to font-bold */}
+              <span className="text-primary">Auto</span>
+              <span className="text-secondary">Rent</span>
             </p>
           </div>
           {/* menu & searchBar */}
           <TopNavigation />
           {/* login/register & userPanel */}
           <Button variant="primary" className="hidden md:block">
-            ورود / ثبت‌نام
+            SignIn / SignUp
           </Button>
           <IconProfileCircle className="md:hidden" />
         </div>

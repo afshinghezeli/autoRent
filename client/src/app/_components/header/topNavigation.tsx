@@ -13,7 +13,7 @@ export const TopNavigation: React.FC<React.HtmlHTMLAttributes<HTMLElement>> = ()
         ))}
       </ul>
       {/* searchBar */}
-      <div className="mr-[43.18px] cursor-pointer hidden lg:block">
+      <div className="ml-[43.18px] cursor-pointer hidden lg:block">
         <IconSearchNormal width={19} height={19} className="text-[#5C5F61] " />
       </div>
     </nav>

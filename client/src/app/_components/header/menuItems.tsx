@@ -9,27 +9,27 @@ import {
 
 export const menuItems: navigationMenuItem[] = [
   {
-    title: "رزرو خودرو",
+    title: "Booking",
     href: "/cars",
     icon: <IconCar width={20} height={20}/>,
   },
   {
-    title: "خدمات ما",
+    title: "Services",
     href: "/",
     icon: <IconService fill="none" width={20} height={20}/>,
   },
   {
-    title: "بلاگ",
+    title: "Blog",
     href: "/blog",
     icon: <IconDocumentText fill="none" width={20} height={20}/>,
   },
   {
-    title: "درباره ما",
+    title: "About Us",
     href: "/about",
     icon: <IconBriefcase fill="none" width={20} height={20}/>,
   },
   {
-    title: "تماس با ما",
+    title: "Contact Us",
     href: "/contact",
     icon: <IconCallCalling width={20} height={20}/>,
   },
