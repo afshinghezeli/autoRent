@@ -132,6 +132,8 @@ export default {
       colors: flowUIColors,
       fontFamily: {
         Estedad: ["var(--font-estedad)", 'sans-serif'],
+        Figtree: ["var(--font-figtree)", 'sans-serif'],
+        Inter: ["var(--font-inter)", 'sans-serif'],
       },
       fontWeight: {
         'regular': '400',
@@ -182,5 +184,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate")
+  ],
 } satisfies Config;

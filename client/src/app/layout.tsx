@@ -1,4 +1,4 @@
-import { Figtree } from "next/font/google";
+import { Figtree, Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import { Metadata, Viewport } from "next";
@@ -21,6 +21,13 @@ const figtree = Figtree({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-figtree",
 });
+
+const inter = Inter({
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+});
 const estedad = localFont({
   src: [
     {
@@ -40,9 +47,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html
-      dir="rtl"
-      lang="fa"
-      className={`${estedad.variable} ${figtree.variable}`}
+      className={`${estedad.variable} ${figtree.variable} ${inter.variable}`}
     >
       <body>
         <Header />
