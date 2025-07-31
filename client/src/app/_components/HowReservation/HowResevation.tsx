@@ -4,14 +4,13 @@ import { IconCalendarTick, IconCar, IconCards, IconKey } from "../icons";
 
 export const HowReservation: React.FC = () => {
   return (
-    <div className="how-reservation">
-      <div className="container mb-[3.5rem]">
+    <div className="container mb-[3.5rem]">
         {/* Title & Subtitle */}
         <div className="text-center mb-[89px]">
-          <span className="font-[400] text-neutral-8 text-2xl mb-2">
+          <span className="font-regular text-neutral-8 text-2xl mb-2">
             چگونه در وبسایت
           </span>
-          <h2 className="font-[800] text-[2rem] text-neutral-10 mb-4">
+          <h2 className="font-bold text-[2rem] text-neutral-10 mb-4">
             <span className="text-secondary-shade-1"> اُتـــورِنت، </span>
             خودرو رزرو کنیم؟{" "}
           </h2>
@@ -37,11 +36,11 @@ export const HowReservation: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-[700] text-2xl mb-2">
+                  <h4 className="font-bold text-2xl mb-2">
                     <span className="text-secondary-shade-1">خودروی</span> خود را
                     انتخاب کنید.
                   </h4>
-                  <p className="flex flex-col font-[500] text-base text-neutral-8 w-[258px]">
+                  <p className="flex flex-col font-medium text-base text-neutral-8 w-[258px]">
                     خودروی مورد نظر خود را، متناسب با درخواست خود انتخاب کنید.
                   </p>
                 </div>
@@ -62,11 +61,11 @@ export const HowReservation: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-[700] text-2xl leading-140 mb-2">
+                  <h4 className="font-bold text-2xl leading-140 mb-2">
                     <span className="text-secondary-shade-1">هزینه</span> اجاره
                     را پرداخت کنید.
                   </h4>
-                  <p className="flex flex-col font-[500] text-base text-neutral-8 w-[258px]">
+                  <p className="flex flex-col font-medium text-base text-neutral-8 w-[258px]">
                     می توانید از طریق کیف پول آنلاین یا کارت های عضو شبکه شتاب
                     هزینه اجاره را پرداخت کنید.
                   </p>
@@ -91,11 +90,11 @@ export const HowReservation: React.FC = () => {
               {/* Box 2 */}
               <div className="flex items-center gap-4">
                 <div>
-                  <h4 className="font-[700] text-2xl  mb-2">
+                  <h4 className="font-bold text-2xl  mb-2">
                     <span className="text-secondary-shade-1">تاریخ</span> تحویل
                     را تعیین کنید.
                   </h4>
-                  <p className="flex flex-col font-[500] text-base text-neutral-8 w-[258px]">
+                  <p className="flex flex-col font-medium text-base text-neutral-8 w-[258px]">
                     تاریخ موردنظر خود را از تقویم، انتخاب و رزرو کنید
                   </p>
                 </div>
@@ -116,11 +115,11 @@ export const HowReservation: React.FC = () => {
               {/* Box 4 */}
               <div className="flex items-center gap-4 mb-[254px]">
                 <div>
-                  <h4 className="font-[700] text-2xl  mb-2">
+                  <h4 className="font-bold text-2xl  mb-2">
                     <span className="text-secondary-shade-1">خودرو</span> را
                     دریافت کنید.
                   </h4>
-                  <p className="flex flex-col font-[500] text-base text-neutral-8 w-[259px]">
+                  <p className="flex flex-col font-medium text-base text-neutral-8 w-[259px]">
                     در زمان و مکان تعیین شده، خودروی خود را دریافت کنید.
                   </p>
                 </div>
@@ -141,7 +140,6 @@ export const HowReservation: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
