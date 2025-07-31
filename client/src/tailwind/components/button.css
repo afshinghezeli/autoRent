@@ -61,5 +61,105 @@
     @apply cursor-not-allowed border-none text-neutral-3 bg-neutral-1;
   }
 
-  //TODO: add size and link style and shape
+  &-xs {
+    @apply px-2 py-1 text-sm;
+  }
+  
+  &-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+  
+  &-lg {
+    @apply px-6 py-3 text-xl font-semibold;
+  }
+
+  &-wide {
+    @apply px-8;
+  }
+  
+  &-block {
+    @apply w-full;
+  }
+  
+  &-square {
+    @apply aspect-square p-2;
+  }
+
+  &-link {
+    @apply bg-transparent border-none underline p-0;
+    @apply hover:no-underline;
+  }
+  &-success {
+    @apply bg-success text-white;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-success-shade-1;
+      }
+    }
+  }
+  
+  &-warning {
+    @apply bg-warning text-black;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-warning-shade-1;
+      }
+    }
+  }
+  
+  &-error {
+    @apply bg-error text-white;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-error-shade-1;
+      }
+    }
+  }
+  
+  &-info {
+    @apply bg-info text-white;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-info-shade-1;
+      }
+    }
+  }
+
+  &-outline {
+    &.btn-success {
+      @apply bg-transparent border border-success text-success;
+      @media (hover: hover) {
+        &:hover {
+          @apply border-success-shade-1 text-success-shade-1;
+        }
+      }
+    }
+    
+    &.btn-warning {
+      @apply bg-transparent border border-warning text-warning;
+      @media (hover: hover) {
+        &:hover {
+          @apply border-warning-shade-1 text-warning-shade-1;
+        }
+      }
+    }
+    
+    &.btn-error {
+      @apply bg-transparent border border-error text-error;
+      @media (hover: hover) {
+        &:hover {
+          @apply border-error-shade-1 text-error-shade-1;
+        }
+      }
+    }
+    
+    &.btn-info {
+      @apply bg-transparent border border-info text-info;
+      @media (hover: hover) {
+        &:hover {
+          @apply border-info-shade-1 text-info-shade-1;
+        }
+      }
+    }
+  }
 }
