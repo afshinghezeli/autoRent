@@ -10,18 +10,15 @@ const carCategories = [
 
 export const CarCategory: React.FC = () => {
   return (
-    <>
-      <div className="car-category">
-        <div className="container">
-          <div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-5 gap-2 mb-12">
+    <div className="container mb-12">
+      <div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-5 gap-2">
             {carCategories.map((category, index) => (
               <div
                 key={index}
-                className="relative col-span-1 overflow-hidden border bg-white border-gray-300 rounded-2xl cursor-pointer
-                "
+                className="relative col-span-1 overflow-hidden border bg-white border-neutral-2 rounded-2xl cursor-pointer hover:shadow-md transition-all duration-200"
               >
                 <div className="flex flex-col items-center">
-                  <h4 className="mt-2 text-xl lg:text-2xl text-[#353535] font-[700]">
+                  <h4 className="mt-2 text-xl lg:text-2xl text-neutral-10 font-bold">
                     {category.name}
                   </h4>
                   <div className="w-full h-auto">
@@ -34,14 +31,12 @@ export const CarCategory: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="absolute -bottom-[14px] right-0 left-0">
-                  <div className=" max-w-[87%] h-[19px] mx-auto bg-[#FDB713] rounded-t-full"></div>
+                <div className="absolute -bottom-3 right-0 left-0"> {/* Changed from -bottom-[14px] to -bottom-3 (12px) */}
+                  <div className="max-w-[87%] h-5 mx-auto bg-secondary rounded-t-full"></div> {/* Updated to use design token secondary color and h-5 (20px) */}
                 </div>
               </div>
             ))}
-          </div>
         </div>
-      </div>
-    </>
+    </div>
   );
 };
