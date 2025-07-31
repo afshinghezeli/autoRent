@@ -2,15 +2,15 @@ import { IconBox, IconSupport24, IconWalletMinus } from "../icons";
 
 function WhyUs() {
   return (
-    <div className="container">
+    <div className="container mb-12">
       <div className="relative pb-[48px]">
         <div className="absolute -z-10 right-0 left-0 h-[292px] why-us-bg bg-no-repeat bg-cover rounded-2xl"></div>
         {/* Header */}
         <div className="why-us__header text-center w-[69%] mx-auto pt-6">
-          <h2 className="font-[700] leading-180 text-secondary text-2xl mb-2">
+          <h2 className="font-bold leading-180 text-secondary text-2xl mb-2">
             چــــــرا اُتو رِنت؟
           </h2>
-          <p className="font-[400] text-lg leading-180 text-white text-justify text-align-end">
+          <p className="font-regular text-lg leading-180 text-white text-justify text-align-end">
             اجاره خودرو از یک شرکت اجاره خودرو با سابقه به شما کمک می‌کند تا در
             مسافرت ها، قرار ملاقات‌ های مهم، مجالس و مراسم‌های خانوادگی ماشین
             مناسب خود را در اختیار داشته باشید. اگر شما اصلا خودرویی در اختیار
@@ -27,11 +27,11 @@ function WhyUs() {
               <IconBox color="#194BF0" width={43} height={43} />
             </div>
             {/* Title */}
-            <h6 className="font-[700] text-base leading-140 text-[#414141]">
+            <h6 className="font-bold text-base leading-140 text-[#414141]">
               تحویل در محل
             </h6>
             {/* Subtitle */}
-            <div className="font-[400] text-xs leading-180 text-center">
+            <div className="font-regular text-xs leading-180 text-center">
               <p>تحویل خودرو در زمان و مکان تعیین شده توسط شما</p>
               <p>خواهد بود.</p>
             </div>
@@ -43,11 +43,11 @@ function WhyUs() {
               <IconSupport24 color="#194BF0" width={43} height={43} />
             </div>
             {/* Title */}
-            <h6 className="font-[700] text-base leading-140 text-[#414141]">
+            <h6 className="font-bold text-base leading-140 text-[#414141]">
               پشتیبانی 24 ساعته
             </h6>
             {/* Subtitle */}
-            <div className="font-[400] text-xs leading-180 text-center">
+            <div className="font-regular text-xs leading-180 text-center">
               <p>کارشناسان ما در هر زمان و مکان، پاسخگوی سوالات</p>
               <p>شما خواهند بود.</p>
             </div>
@@ -59,11 +59,11 @@ function WhyUs() {
               <IconWalletMinus color="#194BF0" width={43} height={43} />
             </div>
             {/* Title */}
-            <h6 className="font-[700] text-base leading-140 text-[#414141]">
+            <h6 className="font-bold text-base leading-140 text-[#414141]">
               قیمت مناسب
             </h6>
             {/* Subtitle */}
-            <div className="font-[400] text-xs leading-180 text-center">
+            <div className="font-regular text-xs leading-180 text-center">
               <p>هدف ما، ارائه بهترین خدمات با مناسب ترین قیمت</p>
               <p>ممکن است.</p>
             </div>
